@@ -1,0 +1,157 @@
+/* body {
+  background: #FFFFFF;
+  margin: 2rem;
+} */
+
+.controls {
+  background-color: rgba(255, 255, 255, 0.50);
+  color: #eee;
+  position:relative;
+  left: 0;
+  right: 0;
+  bottom: 1em;
+  border-radius: 5em;
+  text-align: center;
+  pointer-events: none;
+  transition: opacity .5s ease-in-out;
+  transition-delay: 0s;
+  z-index: 10000;
+  margin-left: 35%;
+  margin-right: 35%;
+  opacity: 0.5;
+}
+
+.player:hover .controls {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.player:not(:hover) .controls {
+  transition-delay: .5s;
+}
+
+.control-button {
+  padding-left: 2%;
+  padding-right: 2%;
+  pointer-events: auto;
+}
+
+#left-video-overlay {
+  left: 0;
+  margin-left: 5%;
+}
+
+#right-video-overlay {
+  right: 0;
+  margin-right: 5%;
+}
+
+#video-compare-container {
+  display: inline-block;
+  line-height: 0;
+  position: relative;
+  width: 100%;
+  padding-top: 53%;
+}
+
+#video-compare-container > video {
+  width: 100%;
+  position: absolute;
+  top: 0; height: 100%;
+}
+
+#video-compare-container .overlay {
+  position: absolute;
+  font: normal 12px courier;
+  text-align: left;
+  color: white;
+  background: rgba(0, 0, 0, 0.50);
+  opacity: .6;
+  top: 1em;
+  z-index: 100;
+  padding: 0.5%;
+  border-radius: 5em;
+  overflow: hidden;
+}
+
+#video-clipper {
+  width: 100%; 
+  position: absolute;
+  top: 0; bottom: 0;
+  overflow: hidden;
+  border-right: 2px solid rgba(0, 0, 0, 0.50);
+}
+
+#video-clipper video {
+  width: 100%;
+  position: absolute;
+  height: 100%;
+}
+
+.comp-slider1 {
+  position: absolute;
+  z-index: 9;
+  cursor: ew-resize;
+  /*set the appearance of the slider:*/
+  width: 40px;
+  height: 40px;
+  background-color: #2196F3;
+  opacity: 0.7;
+  border-radius: 50%;
+}
+
+.comp-slider2 { /* Thin line seperator */
+  position:absolute; 
+  left:50%;
+  top:0;
+  bottom:0;
+  width:4px;
+  margin-left:-2px;
+  z-index: 9; 
+  background: rgba(0,0,0,.5);
+  cursor: ew-resize;
+}
+ 
+.comp-slider2:after {  /* Big orange knob  */
+    position: absolute;
+    top: 50%;
+    width: 64px;
+    height: 64px;
+    margin: -32px 0 0 -32px;
+ 
+    content:'\21d4';
+    color:white;
+    font-weight:bold;
+    font-size:36px;
+    text-align:center;
+    line-height:64px;
+ 
+    background: #ffb800; /* @orange */
+    border:1px solid #e6a600; /* darken(@orange, 5%) */
+    border-radius: 50%;
+    transition:all 0.3s ease;
+    box-shadow:
+      0 2px 6px rgba(0,0,0,.3), 
+      inset 0 2px 0 rgba(255,255,255,.5),
+      inset 0 60px 50px -30px #ffd466; /* lighten(@orange, 20%)*/ 
+}
+
+.draggable:after {
+    width: 48px;
+    height: 48px;
+    margin: -24px 0 0 -24px;
+    line-height:48px;
+    font-size:30px;
+}
+
+ #progressWrap{
+            background-color: black;
+            height: 25px;
+            cursor: pointer;
+}
+#playProgress{
+            background-color: red;
+            width: 0px;
+            height: 25px;
+            border-right: 2px solid blue;
+}
